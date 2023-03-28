@@ -21,6 +21,10 @@
 	margin: 20px;
 }
 
+label,a{
+	text-decoration: none;
+	color: black;
+}
 
 .cgv {
 	display: flex;

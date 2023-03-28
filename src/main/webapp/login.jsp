@@ -83,11 +83,11 @@ input[type="submit"] {
 </style>
 </head>
 <body>
-	<form action="loginProc.jsp" method = "post">
+	<form action="/cgv/CgvTest?action=select" method = "post">
 	<h2>Login</h2>
 	<div>
-		<label for = "userId">로그인</label>
-		<input type = "text" name = "userId" id = "userId" required="required">
+		<label for = "userid">로그인</label>
+		<input type = "text" name = "userid" id = "userid" required="required">
 	</div>
 	<div>
 		<label for = "password">비밀번호</label>
@@ -96,9 +96,7 @@ input[type="submit"] {
 	<div>
 		<input type = "submit" value = "로그인">
 	</div>
-	<div>
 		<input type = "checkbox" name = "remember" value = ""> 아이디 저장하기
-	</div>
 	</form>
 </body>
 </html>

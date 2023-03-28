@@ -23,7 +23,7 @@ input {
 </style>
 </head>
 <body>
-	<form action="joinProc.jsp">
+	<form action="/cgv/CgvTest?action=insert"  method = "post">
 		<label for = "userid">아이디  </label>
 		<input type = "text" id = "userid" name = "userid" placeholder="아이디를 입력해주세요">
 	
