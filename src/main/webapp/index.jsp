@@ -1,181 +1,199 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
-<%@page errorPage="errorPage.jsp"%>    
-    
-    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
 
-.head {
-	display: flex;
-}
-
-.icon>input{
-	display : flex;
-	padding: 20px;
-	margin: 20px;
-}
-
-label,a{
-	text-decoration: none;
-	color: black;
-}
-
-.cgv {
-	display: flex;
-}
-
-.cgv>li{	
-	position: relative;
-	padding-right: 10px;
-}
-
-.cgv>li>a{
-	padding: 0 40px;
-	line-height: 100px;
-	text-decoration: none;
-	color : black;
-}
-
-.cgv>li>a:hover{
-	font-size: bold;
-	color: white;
-	background-color: tomato;
-}
-
-.cgv:hover .cgv-2 {
-	height: 135px;
-	position: absolute; 
+	body {
+		display: flex;
+		justify-content: center;
+	}
 	
-}
-
-
-.cgv-2 {
-	overflow: hidden;
-	width: 100%;
-	padding: 0;
-	background: #fff;
-	height: 0px; 
-}
-
-.cgv-2 a {
-	display: block;
-	padding: 5px 0;
-	text-align: center;
+	.page-container {
+		flex : 1 ;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		max-width: 2000px;
+	}
+	
+	.header {
+		height: 0 0 80px;
+		flex : 1;
+		border-bottom: 1px solid gray; 
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0px 20px;
+		background-color: black;
+	}
+	
+	.header-logo {
+		height: 100px;
+		width: 200px;
+		align-items : center;
+	}
+	
+	.home-menu {
+		padding: 20px;
+		margin-top: 50px;
+	}
+	
+	.home-menu:hover{
+		border-bottom: 2px solid white;
+	}
+	
+	 .home-menu-menu li {
+	 	display : block;
+		overflow : hidden;
+		width : 100%;
+		color: white;
+	}
+	
+	 .home-menu-menu li:hover {
+		overflow : visible;
+		width : 100%;
+		color: white;
+	}
+	a, label{
 	text-decoration: none;
-	color : black;
-}
-
-.cgv-2 a:hover{
-	background: tomato;
 	color : white;
-}
+	}
+	
+	.main-container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	background-color: #0E122C;
+	
+	}
+	
+	.main-container div {
+	margin: 50px;
+	}
+	
+	  section-title-title {
+		border: 3px solid #ccc;
+		margin-bottom: 20px;
+	}
+	
+	.article {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.article-img {
+		size: 50px;
+		border-radius: 20px;
+	}
+	
+	.article-img:hover {
+		opacity: 0.2;
+		
+	}
+		
+	.article-movie-button {
+		display : flex;
+		margin: 30px;
+		background-color: #4d839e;
+		color : white;
+		font-size : x-large;
+		border : none;
+		border-radius: 5px;
+	}
 
-li {
-	list-style: none;
-}
+	span {
+		padding: 10px 20px;
+	}
 
-
-</style>	
+</style>
 </head>
 <body>
-	<form action="login.jsp">
-	<img src="images/bn.jpg" style="width: 1500px;">
-	<input type = "submit" value = "로그아웃">
-	
-	</form>
-	<div class = "head">
-	<a href = "index.jsp">
-	<input type = "image" name = "button" src = "images/cgv.png" style = "width: 120px;">
-	</a>
-	<label> CULTUREFLEX</label>
-	<div class = "icon">
-	<a href = "login.jsp">
-	<input type = "image" name = "login" src = "images/loginbutton.png">
-	<label>로그인</label>
-	</a>
-	
-	<a href = "join.jsp">
-	<input type = "image" name = "join" src = "images/joinbutton.png">
-	<label>회원가입</label>
-	</a>
-	
-	<a href = "#">
-	<input type = "image" name = "mycgv" src = "images/mycgv.png">
-	<label>MY CGV</label>
-	</a>
-	
-	<a href = "#">
-	<input type = "image" name = "customer" src = "images/ccc.png">
-	<label>고객센터</label>
-	</a>
-	</div>
-	
-
-	</div>
-
-	<nav>
-		<ul Class = "cgv">
-			<li>
-				<a href = "#">영화</a>
-			<ul Class = "cgv-2">
-				<li><a href = "#">무비차트</a></li>
-				<li><a href = "#">아트하우스</a></li>
-				<li><a href = "#">ICECON</a></li>
-			</ul>
-			</li>
+	<div class = "page-container">
+		<div class = "header">
+			<div class = "home-menu">
+				<a href = "#">
+				<span class="material-symbols-outlined" style = "color: white">search</span>
+				</a>
+			</div>
+			<div class = "home-menu">
+				<label>영화</label>
+				<ul class = "home-menu-menu">
+					<li>전체영화</li>
+					<li>무비포스트</li>
+				</ul>
+			</div>
+			<div class = "home-menu">
+				<label>예매</label>
+				<ul class = "home-menu-menu">
+					<li>빠른예매</li>
+					<li>상영시간표</li>
+				</ul>
+			</div>
+			<div class = "home-menu">
+				<label>극장</label>
+				<ul class = "home-menu-menu">
+					<li>전체극장</li>
+				</ul>
+			</div>		
+			<div class = "header-logo">
+				<img alt="" src="images/megabox.png">
+			</div>
+			<div class = "home-menu">
+				<a href = "login.jsp">
+				<label>로그인</label>
+				</a>
+			</div>
+			<div class = "home-menu">
+				<a href = "join.jsp">
+				<label>회원가입</label>
+				</a>
+			</div>
+			<div class = "home-menu">
+				<a href = "#">
+				<label>MyPage</label>
+				</a>
+			</div>		
+		</div>
 		
-			<li>
-				<a href = "#">극장</a>
-			<ul Class = "cgv-2">
-				<li><a href = "#">CGV 극장</a></li>
-				<li><a href = "#">특별관</a></li>
-			</ul>
-			</li>
-			
-			<li>
-				<a href = "#">예매</a>
-			<ul Class = "cgv-2">
-				<li><a href = "#">빠른 예매</a></li>
-				<li><a href = "#">상영스케줄</a></li>
-			</ul>
-			</li>
-			
-			<li>
-				<a href = "#">스토어</a>
-			<ul Class = "cgv-2">
-				<li><a href = "#">팝콘</a></li>
-				<li><a href = "#">음료</a></li>
-				<li><a href = "#">스낵</a></li>
-			</ul>
-			</li>
-			
-			<li>
-				<a href = "#">이벤트</a>
-			<ul Class = "cgv-2">
-				<li><a href = "#">SPECIAL</a></li>
-				<li><a href = "#">멤버십/클럽</a></li>
-				<li><a href = "#">제휴할인</a></li>
-			</ul>
-			</li>
-			
-			<li>
-				<a href = "#">혜택</a>
-			<ul Class = "cgv-2">
-				<li><a href = "#">CGV 할인정보</a></li>
-				<li><a href = "#">CLUB 서비스</a></li>
-				<li><a href = "#">VIP 라운지</a></li>
-			</ul>
-			</li>
-			
-		</ul>
-	</nav>
+	<div class = "main-container">
+			<div class = "section-title">
+				<h4 style = "color: white">박스오피스</h4>
+			</div>
 		
-	<img src="images/movie1.png">
+		
+			<div class = "article">
+				<div class = "article-movie">
+					<a href = "movie.jsp"><img alt=""  class = "article-img" src="images/movie.jpg"></a>
+					<button class = "article-movie-button"><span>예매</span></button>
+				</div>
+				
+				<div class = "article-movie" >
+					<a href = "movie2.jsp"><img alt=""  class = "article-img" src="images/happy.jpg"></a>
+					<button class = "article-movie-button"><span>예매</span></button>
+				</div>
+				
+				<div class = "article-movie">
+					<a href = "movie3.jsp"><img alt=""  class = "article-img" src="images/slamdunk.jpg"></a>
+					<button class = "article-movie-button"><span>예매</span></button>
+				</div>
+				
+				<div class = "article-movie">
+					<a href = "movie4.jsp"><img alt=""  class = "article-img" src="images/dragon.jpg"></a>
+					<button class = "article-movie-button"><span>예매</span></button>
+				</div>
+		</div>
+	
+	</div>
 </body>
 </html>
