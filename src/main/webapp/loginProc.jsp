@@ -3,24 +3,17 @@
 	pageEncoding="UTF-8"%>
 
 <%
-	String userId = request.getParameter("userId");
-	String password = request.getParameter("password");
-	String remember = request.getParameter("remember");
+
+String userid = request.getParameter("userId");
+String password = request.getParameter("password");
+
+if(userid != null && password != null) {
 	
-	if (remember != null) {
-		Cookie cookie = new Cookie("userId", userId);
-		cookie.setMaxAge(60 * 60 * 24 * 7); // 7일간 유지
-		response.addCookie(cookie);
+	if(userid.equals(userid) && password.equals(password)) {
+		session.setAttribute("userid",userid);
+		response.sendRedirect("index.jsp");
 	} else {
-		Cookie[] cookies = request.getCookies();
-		if (cookies != null) {
-			for (Cookie c : cookies) {
-		if (c.getName().equals("userId")) {
-			c.setMaxAge(0);
-			response.addCookie(c);
-			break;
-		}
-			}
-		}
+		out.println("<script>alert('아이디와 비밀번호를 다시 확인해주세요'); location.href='login.jsp'</script>");
 	}
+}
 %>

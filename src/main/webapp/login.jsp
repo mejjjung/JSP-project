@@ -1,26 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
-    
-<%
-
-String userId = request.getParameter("userId");
-String password = request.getParameter("password");
-
-if(userId != null && password != null) {
-	
-	if(userId.equals("jjungme") && password.equals("0525")) {
-		session.setAttribute("userId",userId);
-		response.sendRedirect("index.jsp");
-	} else {
-		out.println("<script>alert('아이디와 비밀번호를 다시 확인해주세요'); location.href='login.jsp'</script>");
-	}
-}
-
-
-
-
-%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -83,7 +62,7 @@ input[type="submit"] {
 </style>
 </head>
 <body>
-	<form action="/cgv/CgvTest?action=select" method = "post">
+	<form action="/cgv/CgvTest?action=select" method ="get">
 	<h2>Login</h2>
 	<div>
 		<label for = "userid">로그인</label>

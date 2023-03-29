@@ -27,7 +27,10 @@ public class CgvDTO {
 	}
 
 
-
+	public CgvDTO() {
+		
+	}
+	
 	public int getId() {
 		return id;
 	}
