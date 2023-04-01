@@ -1,21 +1,21 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Login Page</title>
+<jsp:include page = "/layout/header.jsp" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <style type="text/css">
 *{
 	padding: 0;
 	margin: 0;
 	border: none;
+	font-size: large;
 }
 
 body {
 	font-size: 14px;
 	font-family: 'Roboto','sans-serif';
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
@@ -32,7 +32,7 @@ form {
 
 h2 {
 	font-size: 24px;
-	color : #6A24FE;
+	color : black;
 	margin-bottom: 20px;
 }
 input[type="text"],[type="password"] {
@@ -48,7 +48,7 @@ input[type="text"],[type="password"] {
 
 input[type="submit"] {
 	margin-top: 20px;
-	background-color: #6A24FE;
+	background-color: black;
 	width: 100%;
 	height: 48px;
 	padding: 0 10px;
@@ -56,21 +56,21 @@ input[type="submit"] {
 	margin-bottom: 16px;
 	margin-top: 16px;
 	border-radius: 6px; 
+	color : white;'
 }
 
 
 </style>
-</head>
-<body>
-	<form action="/cgv/CgvTest?action=select" method ="get">
+
+	<form action="/megaBox/signInServlet" method ="post">
 	<h2>Login</h2>
 	<div>
 		<label for = "userid">로그인</label>
-		<input type = "text" name = "userid" id = "userid" required="required">
+		<input type = "text" name = "userid" id = "userid" required="required" >
 	</div>
 	<div>
 		<label for = "password">비밀번호</label>
-		<input type = "password" name = "password" id = "password" required="required">
+		<input type = "password" name = "password" id = "password" required="required" >
 	</div>
 	<div>
 		<input type = "submit" value = "로그인">

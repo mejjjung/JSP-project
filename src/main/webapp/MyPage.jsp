@@ -1,15 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+dkfkTH<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<jsp:include page = "/layout/header.jsp" />
+<jsp:include page = "/layout/loginHeader.jsp" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <style type="text/css">
-
 
 body {
 	display: flex;
 	justify-content: center;
-	flex-direction: column;
 	align-items: center;
+	flex-direction: column;
 }
 
 form {
@@ -30,7 +29,7 @@ table {
 th {
 	width:100px;
 	height:50px;
-	background-color: black;
+	background-color: #eee;
 	border-bottom: 1px solid #ccc;
 }
 
@@ -39,8 +38,22 @@ td {
 	height:50px;
 	border-bottom: 1px solid #ccc;
 }
-
 input {
+	margin: 10px;
+}
+
+.update-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.update-button {
+	margin-top: 30px;
+}
+
+.btn {
 	margin: 10px;
 }
 
@@ -52,19 +65,28 @@ input[type="submit"] {
 	cursor: pointer;
 }
 
+button[type="button"] {
+	background-color: black;
+	color: white;
+	padding: 10px;
+	border-radius: 10px;
+	cursor: pointer; 
+	
+}
 </style>
 
-	<form action="/megaBox/userTest?action=insert"  method = "post">
-		<h3>회원 정보를 입력해 주세요</h3>
-		<div class = "join-box">
+	<form action="/megaBox/userTest?action=update"  method = "post">
+		<h3>개인 정보 수정</h3>
+		<div class = "update-box">
 			<table>
 				<tr>
 					<th><label for = "userid">아이디</label></th>
-					<td><input type = "userid" id = "userid" name = "userid" placeholder="아이디를 입력해주세요" required="required"></td>
+					<td><input type = "userid"  id = "userid" name = "userid" required="required"></td>
+					
 				</tr>
 				<tr>
 					<th><label for = "password">비밀번호</label></th>
-					<td><input type = "password"  id = "password" name = "password" placeholder="비밀번호를 입력해주세요" required="required"></td>
+					<td><input type = "password"  id = "password" name = "password" required="required"></td>
 				</tr>
 				<tr>
 					<th><label for = "username">이름</label></th>
@@ -79,14 +101,13 @@ input[type="submit"] {
 					<td><input type = "email" id = "email" name = "email"  required="required"></td>
 				</tr>			
 			</table>
+				<input type = "submit" class = "update-button"   value = "회원수정하기">
+			<div class = "btn">
+			<button type="button" onclick="location.href='delete.jsp' ">탈퇴하기</button>
+			<button type="button" onclick="location.href='index.jsp' ">home</button>
 			</div>
-			<div>
-				<input type = "submit" class = "join-button"   value = "회원가입">
-				</div>
+			</div>
 			</form>
-			
-			
-			
-
+		
 </body>
 </html>

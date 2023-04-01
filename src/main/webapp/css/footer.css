@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+* {
+}
+
+footer {
+	max-width : 100%;
+	background-color: rgb(17, 19, 31);
+	display: flex;
+	justify-content: center;
+	border-top: 1px solid gray;	
+	
+	
+}
+
+pre {
+	margin : 10px;
+	color: white;
+}

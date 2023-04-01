@@ -1,4 +1,4 @@
-package com.jjung.cgv.utils;
+package com.jjung.user.utils;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
