@@ -49,6 +49,13 @@ public class UserDAO implements IUserDAO {
 			}	
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			try {
+				pstmt.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		return dto;
 	}
@@ -81,16 +88,24 @@ public class UserDAO implements IUserDAO {
 	}
 
 	@Override
-	public int delete(int id) {
+	public int delete(String userid, String password) {
 		int resultRowCount = 0;
-		String queryStr = " DELETE FROM cgv WHERE id = ? ";
+		String queryStr = " DELETE FROM cgv WHERE userid = ? AND password=?";
 		PreparedStatement pstmt = null;
 		try {
 			pstmt = conn.prepareStatement(queryStr);
-			pstmt.setInt(1, id);
+			pstmt.setString(1, userid);
+			pstmt.setString(2, password);
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			try {
+				pstmt.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		return resultRowCount;
 	}
@@ -110,7 +125,16 @@ public class UserDAO implements IUserDAO {
 			resultRowCount = pstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
-		} 
+		} finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
 		return resultRowCount;
 	}
 

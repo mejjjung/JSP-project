@@ -54,7 +54,7 @@ input[type="submit"] {
 
 </style>
 
-	<form action="/megaBox/userTest?action=insert"  method = "post">
+	<form action="/megaBox/insertServlet?action=insert"  method = "post">
 		<h3>회원 정보를 입력해 주세요</h3>
 		<div class = "join-box">
 			<table>

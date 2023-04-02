@@ -28,6 +28,11 @@
 		
 	}
 	
+.section-title h4 {
+  color: white;
+  text-align: center;
+}
+	
 
 	.main-container {
 	display: flex;

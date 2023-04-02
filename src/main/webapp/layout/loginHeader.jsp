@@ -11,7 +11,7 @@
 <header>
 		<div class = "header">
 		<div class = "home-menu" style="color: white">
-		<%=(String)session.getAttribute("userid") %>님
+		${sessionScope.username}님
 		</div>
 			<div class = "home-menu">
 				<label>영화</label>
@@ -23,7 +23,7 @@
 				<label>극장</label>
 			</div>		
 			<div class = "header-logo">
-				<img alt="" src="images/box.png">
+				<a href="/megaBox/index.jsp"><img src="images/box.png" alt=""></a>
 			</div>
 			<div class = "home-menu">
 				<a href = "logout.jsp">

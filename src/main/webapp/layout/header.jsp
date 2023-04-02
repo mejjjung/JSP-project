@@ -20,7 +20,7 @@
 				<label>극장</label>
 			</div>		
 			<div class = "header-logo">
-				<img alt="" src="images/box.png"  >
+				<a href="/megaBox/index.jsp"><img src="images/box.png" alt=""></a>
 			</div>
 			<div class = "home-menu">
 				<a href = "login.jsp">

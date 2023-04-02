@@ -1,4 +1,4 @@
-dkfkTH<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <jsp:include page = "/layout/loginHeader.jsp" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -29,7 +29,7 @@ table {
 th {
 	width:100px;
 	height:50px;
-	background-color: #eee;
+	background-color: black;
 	border-bottom: 1px solid #ccc;
 }
 
@@ -75,14 +75,13 @@ button[type="button"] {
 }
 </style>
 
-	<form action="/megaBox/userTest?action=update"  method = "post">
+	<form action="/megaBox/updateServlet?action=update"  method = "post">
 		<h3>개인 정보 수정</h3>
 		<div class = "update-box">
 			<table>
 				<tr>
 					<th><label for = "userid">아이디</label></th>
-					<td><input type = "userid"  id = "userid" name = "userid" required="required"></td>
-					
+					<td><input type="text" id="userid" name="userid" value="${sessionScope.userid}" readonly="readonly"></td>
 				</tr>
 				<tr>
 					<th><label for = "password">비밀번호</label></th>

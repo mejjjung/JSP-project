@@ -28,7 +28,7 @@ table {
 th {
 	width:100px;
 	height:50px;
-	background-color: #eee;
+	background-color: black;
 	border-bottom: 1px solid #ccc;
 }
 
@@ -65,19 +65,24 @@ h3 {
 }
 </style>
 
-<form action="/megaBox/boxTest?action=delete"  method = "post">
-		<h3>회원 탈퇴</h3>
-		<div class = "delete-box">
-			<table>
-				<tr>
-					<th><label for = "id">아이디</label></th>
-					<td><input type = "text" id = "id" name = "id"  placeholder = "회원번호를 입력해주세요"  required="required"></td>
-				</tr>
-			</table>
-			</div>
-			</form>
-			<div>
-				<input type = "submit" class = "delete-button"   value = "회원탈퇴하기">
-			</div>
+<form action="/megaBox/deleteServlet?action=delete"  method = "post">
+	<h3>회원 탈퇴</h3>
+	<div class = "delete-box">
+		<table>
+			<tr>
+				<th><label for = "userid">아이디</label></th>
+				<td><input type = "text" id = "userid" name = "userid"  placeholder = "아이디를 입력해주세요"  required="required"></td>
+			</tr>
+			<tr>
+				<th><label for = "password">패스워드</label></th>
+				<td><input type = "password" id = "password" name = "password"  placeholder = "비밀번호를 입력해주세요"  required="required"></td>
+			</tr>
+		</table>
+	</div>
+	<div>
+		<input type = "submit" class = "delete-button"   value = "회원탈퇴하기">
+	</div>
+</form>
+
 </body>
 </html>
