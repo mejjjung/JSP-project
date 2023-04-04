@@ -26,16 +26,13 @@ public class signInServlet extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		request.setCharacterEncoding("UTF-8");
-//		response.setCharacterEncoding("UTF-8");
-//		response.setContentType("text/plain");
 		
 		UserDAO dao = new UserDAO();
 		String userid = request.getParameter("userid");
 		String password = request.getParameter("password");
 		
-		System.out.println(userid);
-		System.out.println(password);
+//		System.out.println(userid);
+//		System.out.println(password);
 		
 	  UserDTO responseDto =	dao.select(userid, password);
 		if(responseDto != null) {
@@ -44,13 +41,10 @@ public class signInServlet extends HttpServlet {
 			session.setAttribute("username", responseDto.getUsername());
 			 response.sendRedirect("index.jsp");
 		} else {
-			//
-			response.sendRedirect("login.jsp");
-			
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter writer = response.getWriter();
+			writer.println("<script>alert('로그인 실패');location.href='login.jsp'</script>"); 
 		}
-		
-		// 
-		
 	}
 
 }

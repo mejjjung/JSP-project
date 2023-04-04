@@ -1,6 +1,7 @@
 package com.jjung.user.repository;
 
 import java.sql.Connection;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -21,7 +22,7 @@ public class UserDAO implements IUserDAO {
 	@Override
 	public UserDTO select(String userid, String password) {
 		UserDTO dto = null;
-		String strQuery = "SELECT * FROM cgv WHERE userid = ? AND password = ?  ";
+		String strQuery = "SELECT * FROM user WHERE userid = ? AND password = ?  ";
 		PreparedStatement pstmt = null;
 		try {
 			pstmt = conn.prepareStatement(strQuery);
@@ -63,7 +64,7 @@ public class UserDAO implements IUserDAO {
 	@Override
 	public int insert(String userid, String password, String username, String phone, String email) {
 		int resultCount = 0;
-		String queryStr = " INSERT INTO cgv(userid, password, username, phone, email) " + " VALUES(?,?,?,?,?) ";
+		String queryStr = " INSERT INTO user(userid, password, username, phone, email) " + " VALUES(?,?,?,?,?) ";
 		PreparedStatement pstmt = null;
 
 		try {
@@ -90,7 +91,7 @@ public class UserDAO implements IUserDAO {
 	@Override
 	public int delete(String userid, String password) {
 		int resultRowCount = 0;
-		String queryStr = " DELETE FROM cgv WHERE userid = ? AND password=?";
+		String queryStr = " DELETE FROM user WHERE userid = ? AND password=?";
 		PreparedStatement pstmt = null;
 		try {
 			pstmt = conn.prepareStatement(queryStr);
@@ -112,7 +113,7 @@ public class UserDAO implements IUserDAO {
 
 	@Override
 	public int update(String password, String username, String phone, String email, String userid) {
-		String queryStr = " UPDATE cgv SET password = ?,username = ?,phone = ?, email = ? " + " WHERE userid = ? ";
+		String queryStr = " UPDATE user SET password = ?,username = ?,phone = ?, email = ? " + " WHERE userid = ? ";
 		int resultRowCount = 0;
 		PreparedStatement pstmt = null;
 		try {

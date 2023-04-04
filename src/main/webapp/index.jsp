@@ -31,6 +31,7 @@
 .section-title h4 {
   color: white;
   text-align: center;
+  background-color: #0E122C;
 }
 	
 
@@ -43,6 +44,7 @@
 	}
 	
 	.main-container div {
+	background-color: #0E122C;
 	margin: 50px;
 	}
 	

@@ -14,7 +14,9 @@
 		${sessionScope.username}님
 		</div>
 			<div class = "home-menu">
+			<a href = "/megaBox/movieSerch">
 				<label>영화</label>
+				</a>
 			</div>
 			<div class = "home-menu">
 				<label>예매</label>
@@ -36,7 +38,7 @@
 				</a>
 		</div>
 			<div class = "home-menu">
-				<a href = "#">
+				<a href = "movieSearch.jsp">
 				<span class="material-symbols-outlined" style = "color: white">search</span>
 				</a>
 			</div>
