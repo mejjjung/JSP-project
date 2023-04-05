@@ -1,7 +1,7 @@
-package com.jjung.user.repository;
+package com.megaBox.user.repository;
 
 
-import com.jjung.user.dto.UserDTO;
+import com.megaBox.user.dto.UserDTO;
 
 public interface IUserDAO {
 

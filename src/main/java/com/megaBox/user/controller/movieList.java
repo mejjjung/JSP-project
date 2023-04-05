@@ -1,4 +1,4 @@
-package com.jjung.user.controller;
+package com.megaBox.user.controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -10,10 +10,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.jjung.user.dto.MovieDTO;
-import com.jjung.user.repository.MovieDAO;
+import com.megaBox.user.dto.MovieDTO;
+import com.megaBox.user.repository.MovieDAO;
 
-@WebServlet("/movieSerch")
+@WebServlet("/movieList")
 public class movieList extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

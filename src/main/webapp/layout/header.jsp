@@ -11,7 +11,7 @@
 	<header>
 		<div class = "header">
 			<div class = "home-menu">
-				<a href = "/megaBox/movieSerch">
+				<a href = "/megaBox/movieList">
 				<label>영화</label>
 				</a>
 			</div>
@@ -22,20 +22,20 @@
 				<label>극장</label>
 			</div>		
 			<div class = "header-logo">
-				<a href="/megaBox/index.jsp"><img src="images/box.png" alt=""></a>
+				<a href="connector?action=index"><img src="images/box.png" alt=""></a>
 			</div>
 			<div class = "home-menu">
-				<a href = "login.jsp">
+				<a href = "connector?action=login">
 				<label>로그인</label>
 				</a>
 			</div>
 			<div class = "home-menu">
-				<a href = "join.jsp">
+				<a href = "connector?action=join">
 				<label>회원가입</label>
 				</a>
 			</div>
 			<div class = "home-menu">
-				<a href = "movieSearch.jsp">
+				<a href = "connector?action=search">
 				<span class="material-symbols-outlined" style = "color: white">search</span>
 				</a>
 			</div>

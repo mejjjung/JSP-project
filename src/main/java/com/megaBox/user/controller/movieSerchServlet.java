@@ -1,4 +1,4 @@
-package com.jjung.user.controller;
+package com.megaBox.user.controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.jjung.user.dto.MovieDTO;
-import com.jjung.user.repository.MovieDAO;
+import com.megaBox.user.dto.MovieDTO;
+import com.megaBox.user.repository.MovieDAO;
 
 @WebServlet("/SearchServlet")
 public class movieSerchServlet extends HttpServlet {
@@ -24,12 +24,9 @@ public class movieSerchServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		MovieDAO dao = new MovieDAO();
 		String action = request.getParameter("action");
-//		System.out.println(action);
-		String movie = request.getParameter("movieName");
+		String movie = request.getParameter("movie");
 		String searchMovieName =request.getParameter("search");
-//		System.out.println(searchMovieName);
 		ArrayList<MovieDTO> list = dao.movie(searchMovieName);
-//		System.out.println(list);
 		if("search".equals(action)) {
 			request.setAttribute("list", list);
 			RequestDispatcher dispatcher = request.getRequestDispatcher("movieSearch.jsp");

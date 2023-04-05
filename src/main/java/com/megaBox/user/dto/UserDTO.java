@@ -1,4 +1,4 @@
-package com.jjung.user.dto;
+package com.megaBox.user.dto;
 
 public class UserDTO {
 

@@ -1,4 +1,4 @@
-package com.jjung.user.repository;
+package com.megaBox.user.repository;
 
 import java.sql.Connection;
 
@@ -6,8 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.jjung.user.dto.UserDTO;
-import com.jjung.user.utils.DBHelper;
+import com.megaBox.user.dto.UserDTO;
+import com.megaBox.user.utils.DBHelper;
 
 public class UserDAO implements IUserDAO {
 

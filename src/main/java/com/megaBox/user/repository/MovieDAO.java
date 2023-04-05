@@ -1,4 +1,4 @@
-package com.jjung.user.repository;
+package com.megaBox.user.repository;
 
 import java.sql.Connection;
 
@@ -7,8 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import com.jjung.user.dto.MovieDTO;
-import com.jjung.user.utils.DBHelper;
+import com.megaBox.user.dto.MovieDTO;
+import com.megaBox.user.utils.DBHelper;
 
 public class MovieDAO implements IMovieDAO {
 
@@ -36,8 +36,8 @@ public class MovieDAO implements IMovieDAO {
 			while(rs.next()) {
 				int id = rs.getInt("id");
 				String img = rs.getString("img");
-				String movieName = rs.getString("movieName");
-				MovieDTO dto = new MovieDTO(id, img, movieName);
+				String movie = rs.getString("movie");
+				MovieDTO dto = new MovieDTO(id, img, movie);
 				list.add(dto);
 			}
 		} catch (SQLException e) {
@@ -54,26 +54,24 @@ public class MovieDAO implements IMovieDAO {
 	}
 
 	@Override
-	public ArrayList<MovieDTO> movie(String movieName) {
+	public ArrayList<MovieDTO> movie(String movie) {
 		ArrayList<MovieDTO> search = new ArrayList<>();
 		
-		String strQuery = " SELECT * FROM movie WHERE movieName LIKE ?";
+		String strQuery = " SELECT * FROM movie WHERE movie LIKE ?";
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		
 		try {
 			pstmt = conn.prepareStatement(strQuery);
-			pstmt.setString(1, "%"+movieName+"%");
-//			System.out.println(pstmt);
+			pstmt.setString(1, "%"+movie+"%");
 			rs = pstmt.executeQuery();
 			
 			while(rs.next()) {
 				int id = rs.getInt("id");
 				String img = rs.getString("img");
-				String movie = rs.getString("movieName");
-				MovieDTO dto = new MovieDTO(id, img, movie);
+				String movieName = rs.getString("movie");
+				MovieDTO dto = new MovieDTO(id, img, movieName);
 				search.add(dto);
-				
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

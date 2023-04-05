@@ -73,7 +73,7 @@ input {
 		<c:forEach var="list" items="${list }">
 			<div class="movie">
 				<img src="/${list.img }" />
-				<p>${list.movieName }</p>
+				<p>${list.movie }</p>
 			</div>
 		</c:forEach>
 	</div>

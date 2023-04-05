@@ -1,4 +1,4 @@
-<%@page import="com.jjung.user.dto.MovieDTO"%>
+<%@page import="com.megaBox.user.dto.MovieDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
  <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -22,7 +22,7 @@
 }
 
 .movie-list {
-	margin-right: 100px;
+	margin: 20px;
 	text-align: center;
 }
 p {
@@ -58,7 +58,7 @@ img:hover {
 		<div class = "movie-list">
 			<h3>${list.id }</h3>
 			<img src="/${list.img }" />
-			<p>${list.movieName }</p>
+			<p>${list.movie }</p>
 		</div>
 		
 		</c:forEach>

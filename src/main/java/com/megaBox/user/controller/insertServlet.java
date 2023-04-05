@@ -1,4 +1,4 @@
-package com.jjung.user.controller;
+package com.megaBox.user.controller;
 
 import java.io.IOException;
 
@@ -9,13 +9,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.jjung.user.repository.UserDAO;
+import com.megaBox.user.repository.UserDAO;
 
-@WebServlet("/updateServlet")
-public class updateServlet extends HttpServlet {
+@WebServlet("/insertServlet")
+public class insertServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public updateServlet() {
+    public insertServlet() {
         super();
     }
 
@@ -25,22 +25,23 @@ public class updateServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/plain");
+		
+		int responseCount = 0;
+		UserDAO dao = new UserDAO();
 		String action = request.getParameter("action");
 		String userid = request.getParameter("userid");
 		String password = request.getParameter("password");
 		String username = request.getParameter("username");
 		String phone = request.getParameter("phone");
 		String email = request.getParameter("email");
-		UserDAO dao = new UserDAO();
-		int responseCount = 0;
 		
-		if(action.equals("update")) {
-			responseCount = dao.update(password,username, phone, email, userid);
-			RequestDispatcher dispatcher = request.getRequestDispatcher("MyPage.jsp");
+		if(action.equals("insert"))  {
+			responseCount = dao.insert(userid, password, username, phone, email);
+			RequestDispatcher dispatcher = request.getRequestDispatcher("joinOk.jsp");
 			dispatcher.forward(request, response);
-			
 		}
-	
+		
+		
 	}
 
 }

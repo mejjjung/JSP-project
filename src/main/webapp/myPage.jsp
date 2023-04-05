@@ -1,6 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<jsp:include page = "/layout/loginHeader.jsp" />
+<%
+	String userid = (String)session.getAttribute("userid");
+	if(userid == null) {%>
+		<jsp:include page = "/layout/header.jsp" />
+	<%} else { %>
+		<jsp:include page = "/layout/loginHeader.jsp" />
+	<%} %>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <style type="text/css">
 

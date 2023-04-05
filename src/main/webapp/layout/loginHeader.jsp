@@ -14,7 +14,7 @@
 		${sessionScope.username}님
 		</div>
 			<div class = "home-menu">
-			<a href = "/megaBox/movieSerch">
+			<a href = "/megaBox/movieList">
 				<label>영화</label>
 				</a>
 			</div>
@@ -25,20 +25,20 @@
 				<label>극장</label>
 			</div>		
 			<div class = "header-logo">
-				<a href="/megaBox/index.jsp"><img src="images/box.png" alt=""></a>
+				<a href="connector?action=index"><img src="images/box.png" alt=""></a>
 			</div>
 			<div class = "home-menu">
-				<a href = "logout.jsp">
+				<a href = "connector?action=logout">
 				<label>로그아웃</label>
 				</a>
 			</div>
 			<div class = "home-menu">
-				<a href = "MyPage.jsp">
+				<a href = "connector?action=myPage">
 				<label>MyPage</label>
 				</a>
 		</div>
 			<div class = "home-menu">
-				<a href = "movieSearch.jsp">
+				<a href = "connector?action=search">
 				<span class="material-symbols-outlined" style = "color: white">search</span>
 				</a>
 			</div>

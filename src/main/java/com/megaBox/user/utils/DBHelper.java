@@ -1,4 +1,4 @@
-package com.jjung.user.utils;
+package com.megaBox.user.utils;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
