@@ -13,7 +13,7 @@ DATABASE <img src="https://img.shields.io/badge/MySQL-6DB33F?style=for-the-badge
 
 ## 💡주요 기능
 
-메인페이지
+메인페이지 [**상세보기 - WIKI 이동**](https://github.com/mejjjung/JSP-project.wiki.git)
 - MEGA BOX 홈페이지를 참고
 - 상영중인 인기 영화 포스터 나열
 
