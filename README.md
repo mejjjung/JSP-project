@@ -27,7 +27,7 @@ DATABASE <img src="https://img.shields.io/badge/MySQL-6DB33F?style=for-the-badge
 마이페이지 [**상세보기 -WIKI 이동**](https://github.com/mejjjung/JSP-project/wiki/%ED%9A%8C%EC%9B%90-%EC%A0%95%EB%B3%B4-%EC%88%98%EC%A0%95-%ED%8E%98%EC%9D%B4%EC%A7%80)
 - 회원 정보 변경 기능
 
-회원 탈퇴 
+회원 탈퇴 [**상세보기 -WIKI 이동**](https://github.com/mejjjung/JSP-project/wiki/%ED%9A%8C%EC%9B%90-%ED%83%88%ED%87%B4-%ED%8E%98%EC%9D%B4%EC%A7%80)
 - 회원탈퇴 시 DB에서 정보 삭제
 - 탈퇴 시 세션(Session) 삭제
 
