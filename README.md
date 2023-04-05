@@ -6,9 +6,12 @@ MEGA BOX를 참고하여 만든 영화 사이트 입니다.
 23.03.29 - 23.04.05
 ## ⚙️개발 환경 
 <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
-<img src="https://img.shields.io/badge/JDK SE 11-61DAFB?style=for-the-badge&logo=React&logoColor=black">
-IDE <img src="https://img.shields.io/badge/Eclipse EE-1572B6?style=for-the-badge&logo=Css&logoColor=white">
-DATABASE <img src="https://img.shields.io/badge/MySQL-6DB33F?style=for-the-badge&logo=Spring&logoColor=green">
+
+JDK SE 11
+
+IDE : Eclipse EE
+
+ DATABASE : MySQL
 
 
 ## 💡주요 기능
