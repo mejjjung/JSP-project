@@ -24,7 +24,7 @@ DATABASE <img src="https://img.shields.io/badge/MySQL-6DB33F?style=for-the-badge
 회원가입 [**상세보기 - WIKI 이동**](https://github.com/mejjjung/JSP-project/wiki/%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85-%ED%8E%98%EC%9D%B4%EC%A7%80)
 - 회원가입 시 입력한 정보를 DB에 저장
 
-마이페이지
+마이페이지 [**상세보기 -WIKI 이동**](https://github.com/mejjjung/JSP-project/wiki/%ED%9A%8C%EC%9B%90-%EC%A0%95%EB%B3%B4-%EC%88%98%EC%A0%95-%ED%8E%98%EC%9D%B4%EC%A7%80)
 - 회원 정보 변경 기능
 
 회원 탈퇴 
