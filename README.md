@@ -33,3 +33,15 @@ DATABASE <img src="https://img.shields.io/badge/MySQL-6DB33F?style=for-the-badge
 
 검색 페이지 [**상세보기 -WIKI 이동**](https://github.com/mejjjung/JSP-project/wiki/%EC%98%81%ED%99%94-%EA%B2%80%EC%83%89-%ED%8E%98%EC%9D%B4%EC%A7%80)
 - 영화 이름 검색 기능
+
+🎥 시연 영상
+<details>
+<summary>영상</summary>
+<div markdown="1">
+
+https://user-images.githubusercontent.com/124986563/230128313-1243ca1a-7132-4530-8cbf-b3743545f668.mp4
+
+</div>
+</details>
+
+
