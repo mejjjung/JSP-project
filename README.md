@@ -31,5 +31,5 @@ DATABASE <img src="https://img.shields.io/badge/MySQL-6DB33F?style=for-the-badge
 - 회원탈퇴 시 DB에서 정보 삭제
 - 탈퇴 시 세션(Session) 삭제
 
-검색 페이지
+검색 페이지 [**상세보기 -WIKI 이동**](https://github.com/mejjjung/JSP-project/wiki/%EC%98%81%ED%99%94-%EA%B2%80%EC%83%89-%ED%8E%98%EC%9D%B4%EC%A7%80)
 - 영화 이름 검색 기능
